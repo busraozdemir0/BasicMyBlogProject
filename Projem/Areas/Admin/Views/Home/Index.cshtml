@@ -1,0 +1,40 @@
+﻿@using Projem.Models
+@model List<About>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<!--  LİST-UPDATE-DELETE   -->
+
+<table class="table">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">İsim</th>
+            <th scope="col">Hakkında</th>
+            <th scope="col">Güncelle </th>
+            <th scope="col">Sil </th>
+
+        </tr>
+    </thead>
+</table>
+
+<table class="table table-striped table-hover">
+    @foreach (var item in Model)
+    {
+        <tbody>
+            <tr>
+                <td>@item.name </td>
+                <td>@item.about </td>
+                <td> <a class="btn btn-info" href="/Admin/Home/Kisi_Guncelle/@item.id">Güncelle</a></td>
+                <td><a class="btn btn-danger" href="/Admin/Home/Kisi_Sil/@item.id">Sil </a></td>
+            </tr>
+        </tbody>
+
+    }
+</table>
+
+
+
+

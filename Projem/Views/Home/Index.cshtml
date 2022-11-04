@@ -1,0 +1,36 @@
+﻿@using Projem.Models
+@model List<About>
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<!-- Home -->
+<div class="wrapper style1 first">
+    <article class="container" id="top">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+
+                <div class="4u 12u(mobile)">
+
+                    <span class="image fit"><img src="/resimler/@item.imagePath" alt="" /></span>
+
+                </div>
+                <div class="8u 12u(mobile)">
+                    <header>
+
+                        <h1> Hi. I'm <strong>@item.name</strong></h1>
+                    </header>
+                </div>
+                <p>@item.about</p>
+                <a href="#work" class="button big scrolly">Learn about what I do</a>
+            }
+        </div>
+    </article>
+</div>
+
+
+
+
+

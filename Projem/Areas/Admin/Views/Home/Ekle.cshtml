@@ -1,0 +1,26 @@
+﻿@model Projem.Models.About
+@{
+    ViewData["Title"] = "Ekle";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Kişi Ekleme Sayfası</h1>
+
+<!--  CREATE    -->
+
+<form method="post" enctype="multipart/form-data">
+    <!-- encytype>> resim seçme işlemi yapıldıktan sonra butona tıklanınca resim seçme kısmı boş dönmemesi için -->
+    <div class="form-group">
+        <label for="exampleInputEmail1">İsim</label>
+        <input type="text" name="name" class="form-control" id="exampleInputText1" placeholder="İsim Gir">
+
+    </div>
+    <div class="form-group">
+        <label for="exampleInputPassword1">Hakkında</label>
+        <input type="text" name="about" class="form-control" id="exampleInputText1" placeholder="Hakkında Bilgisi Gir">
+    </div>
+    <input type="file" name="imageUrl" />
+
+    <button type="submit" class="btn btn-info mb-2">Kaydet</button>
+</form>
+
